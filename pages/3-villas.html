@@ -1,0 +1,44 @@
+---
+layout: default
+type: page
+language: en
+title: PrestigeBookings.com - Luxury villas for rent Cyprus
+description: "A selection of 3 Bedroom Holiday Villas in Paphos, Cyprus.
+Enjoy spending time with your family and friends"
+seotitle: PrestigeBookings.com - Luxury villas for rent Cyprus
+image: /assets/gallery/agios-ilias-1/02-w1920.jpg
+permalink: /paphos-3-bedroom-villas
+---
+<div class="container section">
+    <h4 class="ft-500 text-center">Our 3 bedroom villas in Paphos make the perfect start for the perfect holiday.
+        Our experience help us provide exactly what our guest needs to feel like home
+        and enjoy their holiday!</h4>
+    <h4 class="ft-400 text-center">All our villas come with a private pool, stunning interiors and outdoor dining
+        spaces. Take a look at our beautiful 3 bedroom villas below</h4>
+</div>
+<div class="container">
+    <div class="border-bottom-dark-gray"></div>
+</div>
+<div class="container section">
+    <div class="row sm-gutters">
+        {% for page in site.pages %}
+            {% if page.bedrooms == 3 %}	
+            {% if page.title %}
+            {% assign img = page.image | remove_first:'/' %}
+            <div class="col-lg-3 col-md-6">
+                <div class="villa-card">
+                    <img src="{{ img | prepend: SourceUrl }}" class="card-img-top" alt="">
+                    <div class="villa-card-body">
+                        <h5 class="villa-card-title">{{ page.title }}</h5>
+                        <p class="villa-card-text font-sm">{{ page.description | truncatewords: 15 }}</p>
+                    </div>
+                    <div class="villa-card-footer text-center">
+                        <a href="{{ page.permalink | prepend: SourceUrl | remove_first:'/' }}" class="btn btn-check btn-block text-uppercase ft-500 font-md card-btn">View This Villa</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}				
+        {% endfor %}
+    </div>
+</div>

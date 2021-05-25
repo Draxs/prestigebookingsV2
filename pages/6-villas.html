@@ -1,0 +1,43 @@
+---
+layout: default
+type: page
+language: en
+title: Rent luxury Villas ideal for Weddings in Paphos
+description: "Book a beachfront luxury holiday villa with sea view and private pool in Coral
+Bay, Paphos"
+seotitle: Rent luxury Villas ideal for Weddings in Paphos
+image: /assets/gallery/mia/22-w1920.jpg
+permalink: /paphos-6-bedroom-villas
+---
+<div class="container section">
+    <h4 class="ft-500 text-center">This truly spectacular 6-bedroom luxury holiday villa has private access directly
+        onto the beach. It’s ideal for families sharing a holiday together, large groups, or
+        as a luxury wedding villa</h4>
+    <h4 class="ft-400 text-center">Take a look at this incredible villa and plan a great holiday with us</h4>
+</div>
+<div class="container">
+    <div class="border-bottom-dark-gray"></div>
+</div>
+<div class="container section">
+    <div class="row sm-gutters justify-content-center ">
+        {% for page in site.pages %}
+            {% if page.bedrooms == 6 %}	
+            {% if page.title %}
+            {% assign img = page.image | remove_first:'/' %}
+            <div class="col-lg-3 col-md-6">
+                <div class="villa-card">
+                    <img src="{{ img | prepend: SourceUrl }}" class="card-img-top" alt="elite-villa.jpg">
+                    <div class="villa-card-body">
+                        <h5 class="villa-card-title">{{ page.title }}</h5>
+                        <p class="villa-card-text font-sm">{{ page.description | truncatewords: 20 }}</p>
+                    </div>
+                    <div class="villa-card-footer text-center">
+                        <a href="{{ page.permalink | prepend: SourceUrl | remove_first:'/' }}" class="btn btn-check btn-block text-uppercase ft-500 font-md card-btn">View This Villa</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}				
+        {% endfor %}
+    </div>
+</div>

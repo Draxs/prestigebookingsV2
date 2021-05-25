@@ -1,0 +1,43 @@
+---
+layout: default
+type: page
+language: en
+title: The Luxury holiday Villas to Rent in Cyprus
+description: "Rent from a wide selection of holiday homes and luxury villas best for families or
+large groups"
+seotitle: The Luxury holiday Villas to Rent in Cyprus
+image: /assets/gallery/atlantos/01-w1920.jpg
+permalink: /paphos-4-bedroom-villas
+---
+<div class="container section">
+    <h4 class="ft-500 text-center">Our 4 bedroom villas in Paphos are ideal for larger families and groups of friends
+        looking for that perfect holiday in the sunshine! All our exquisite villas share a
+        spacious pool with outdoor area, modern interiors and are fully equipped</h4>
+    <h4 class="ft-400 text-center">Find the perfect match for you from our gorgeous 4 bedroom villas</h4>
+</div>
+<div class="container">
+    <div class="border-bottom-dark-gray"></div>
+</div>
+<div class="container section">
+    <div class="row sm-gutters">
+        {% for page in site.pages %}
+            {% if page.bedrooms == 4 %}	
+            {% if page.title %}
+            {% assign img = page.image | remove_first:'/' %}
+            <div class="col-lg-3 col-md-6">
+                <div class="villa-card">
+                    <img src="{{ img | prepend: SourceUrl }}" class="card-img-top" alt="">
+                    <div class="villa-card-body">
+                        <h5 class="villa-card-title">{{ page.title }}</h5>
+                        <p class="villa-card-text font-sm">{{ page.description | truncatewords: 20 }}</p>
+                    </div>
+                    <div class="villa-card-footer text-center">
+                        <a href="{{ page.permalink | prepend: SourceUrl | remove_first:'/' }}" class="btn btn-check btn-block text-uppercase ft-500 font-md card-btn">View This Villa</a>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+            {% endif %}				
+        {% endfor %}
+    </div>
+</div>

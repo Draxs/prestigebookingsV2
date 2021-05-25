@@ -1,0 +1,290 @@
+---
+layout: default
+type: villa
+bedrooms: 5
+language: en
+title: Avyana
+seotitle: Villa Avyana, 5 Bedrooms , Paphos, Sea Caves
+description: "Villa Avyana is a luxurious, spacious and extremely private villa with stunning sea views and is located a mere 2.5Km from the centre of Coral Bay Resort..."
+image: /assets/images/2-w1920-md.jpg
+permalink: /villa-avyana-coral-bay-paphos-cyprus
+---
+<!-- section -->
+<div class="section gray-bg-color">
+    <div class="container">
+        <div class="villa-title">
+            <div class="row align-items-end">
+                <div class="col-md-6">
+                    <h1 class=""><img class="" src="assets/images/exclusive.png" alt="Exclusive Paphos Holiday Villa" width="80"> Villa Avyana</h1>
+                    <h4 class="ft-300 ">Coral Bay, Sea Caves, 5 Bedrooms, 6 Bathrooms</h4>
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-sm" src="assets/images/conde-logo.png" style="width: 180px; height: 180px;" alt="Exclusive Paphos Holiday Villa">
+                </div>
+                <div class="col-md-3 text-center">
+                    <img class="img-md" src="assets/images/booking-review-awards.png" style="width: 350px; height: 75px;" alt="Booking Review Awards">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-9">
+                <!-- slider -->
+                <div class="row">
+                    <div class="col">
+                        <div class="owl-carousel carousel-large">
+                            {% for image in site.static_files %}
+                                {% if image.path contains 'gallery/avyana' %}
+                                {% assign myhash = image.path | remove_first:'/assets/gallery/' %}
+                                {% assign img = image.path | remove_first:'/' %}
+                                <div class="item" data-hash="{{ myhash }}">
+                                    <div class="villa-slide" data-src="{{ img | prepend: SourceUrl }}"></div>
+                                </div>
+                                {% endif %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <div class="villa-thumbs-container">
+                            <div class="owl-carousel carousel-thumbs">
+                                {% for thumb in site.static_files %}
+                                    {% if thumb.path contains 'thumbs/avyana' %}
+                                    {% assign tt = thumb.path | remove_first:'/assets/thumbs/' %}
+                                    {% assign tmb = thumb.path | remove_first:'/' %}
+                                    <div class="item">
+                                        <a class="button secondary url" href="#{{ tt }}" title="thumb nav">
+                                            <div class="villa-thumb" style="background-image: url('{{ tmb | prepend: SourceUrl }}');"></div>
+                                        </a>
+                                    </div>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ./slider -->
+                <!-- short description -->
+                <div class="row">
+                    <div class="col">
+                        <p>Villa Avyana is a luxurious, spacious and extremely private villa with stunning sea views and is located a mere2.5Km from the centre of Coral Bay Resort. The stunning blue flag beach of Coral Bay has long been a magnet for those seeking the perfect vacation. Completed in May 2019, Villa Avyana offers 640Sqm of covered space over 4 floors and is designed with modern living and style in mind. Completed to the very highest of standards, villa Avyana is sure to offer a quality time holiday for everyone.<a href="#villa-description"> Read more...</a></p>
+                    </div>
+                </div>
+                <!-- ./short description -->
+                
+                <div class="videoWrapper">    
+                    <iframe width="800" height="453" src="https://www.youtube.com/embed/xAWKeXYg2c0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>         
+                </div>
+
+                <!-- tabs -->
+                <div class="row">
+                    <div class="col">
+                        <div class="divider-md"></div>
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-inside-tab" data-toggle="tab" href="#nav-inside" role="tab" aria-controls="nav-inside" aria-selected="true">Inside</a>
+                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Outside</a>
+                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Distances</a>
+                                <a class="nav-item nav-link" id="nav-print-tab" data-toggle="tab" href="#nav-print" role="tab" aria-controls="nav-print" aria-selected="false">Fine Print</a>
+                            </div>
+                        </nav>
+                        <div class="tab-content white-bg-color" id="nav-tabContent"> 
+                            <div class="tab-pane fade show active" id="nav-inside" role="tabpanel" aria-labelledby="nav-inside-tab">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <ul class="feature-list">
+                                            <li>Cooker</li>
+                                            <li>Fridge</li>
+                                            <li>Freezer</li>
+                                            <li>Microwave</li>
+                                            <li>Toaster</li>
+                                            <li>Kettle</li>
+                                            <li>Dishwasher</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <ul class="feature-list">
+                                            <li>Washing machine</li>
+                                            <li>Iron, Hair dryer</li>
+                                            <li>Free Internet TV</li>
+                                            <li>Private cinema</li>
+                                            <li>Free Wifi</li>
+                                            <li>Free High chair (if required)</li>
+                                            <li>Free Infant Cot (if required)</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <ul class="feature-list">
+                                            <li>Safe</li>
+                                            <li>Air conditioning included in the price</li>
+                                            <li>Linen provided</li>
+                                            <li>Towels provided</li>
+                                            <li>Private Sauna</li>
+                                            <li>Table Football</li>
+                                            <li>Table Tennis</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <ul class="feature-list">
+                                            <li>Private outdoor pool</li>
+                                            <li>private bar</li>
+                                            <li>Numerous terraces</li>
+                                            <li>Boat Hire available</li>
+                                            <li>Bicycle Hire available</li>
+                                            <li>Secure parking</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                <div class="row">
+                                    <div class="col">
+                                        <ul class="feature-list">
+                                            <li>Nearest Beach: 2.5Km</li>
+                                            <li>Nearest Restaurant: 500m</li>
+                                            <li>Resort Centre: 2.5km</li>
+                                            <li>Mini-market: 1Km</li>
+                                            <li>Car Hire: Essential</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-print" role="tabpanel" aria-labelledby="nav-print-tab">
+                                <div class="row">
+                                    <div class="col">
+                                        <ul class="feature-list">
+                                            <li>Arrival from 16:00 on arrival day</li>
+                                            <li>Departure by 10:00 on departure day</li>
+                                            <li>Airconditioning - Included</li>
+                                            <li>Pool Heating - €65.00 per day. Must be booked at least 3 days before arrival and for full duration of stay. Available October 2019</li>
+                                            <li>Central Heating - €65.00 per day. Must be booked at least 3 days before arrival and for full duration of stay</li>
+                                            <li>Spa Package/Jacuzzi/Sauna - €50.00 per day payable locally on arrival</li>
+                                            <li>Refundable Security Deposit - €1000 pre-authorised by debit/credit card on arrival* Doubled if holding function</li>
+                                            <li>Function/Wedding Fee - €1000 payable on arrival (Maximum function guests 80)</li>
+                                            <li>Maximum Occupancy - 11 including children - 15 from 01 April 2020</li>
+                                            <li>Pets - No pets allowed</li>
+                                            <li>Single Gender - No hen or stag parties accepted</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- tabs -->
+            </div>
+            <!-- booking Sidebar -->
+            <div class="col-lg-3">
+                <div class="sidebar-box villa-features-box white-bg-color">
+                    <h4 class="ft-500">Villa Avyana</h4>
+                    <div class="row font-md ft-500">
+                        <div class="col-6">
+                            City: Paphos
+                        </div>
+                        <div class="col-6">
+                            Area: Sea Caves
+                        </div>
+                    </div>
+                    <div class="row font-md ft-500">
+                        <div class="col-6">
+                            5 Bedrooms
+                        </div>
+                        <div class="col-6">
+                            6 Bathrooms
+                        </div>
+                        <div class="col-6">
+                            1 Guest WC
+                        </div>
+                        <div class="col-6">
+                            Numerous terraces
+                        </div>
+                    </div>
+                    <div class="row font-md ft-500">
+                        <div class="col-6">
+                            Total Covered 620Sqm
+                        </div> 
+                    </div>
+                    
+                    <div class="row justify-content-center font-md ft-500">
+                        <div class="col">
+                            <iframe title="availabality" src="https://www.availabilitycalendar.com/embed/cMVh8GKNW9OQXDwWCuv5/en-1-1-1-1-0-2-0-0-0-0-0-1-0/" height="380" width="100%" frameborder="0" allowtransparency="true"></iframe>
+                        </div>
+                    </div>
+                    <form action="https://app.thebookingbutton.com/" class="ibe" data-region="emea" data-channelcode="prestigebookdirect" target="_blank">
+                        <input type="hidden" name="room_type" value="227113" >
+                        {% include bookingform.html %}
+                    </form>
+                    <div class="row font-md ft-500">
+                        <div class="col">
+                            <p class="t-m-20">Please note that a minimum stay of 4 nights is required</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col text-center">
+                    <a class="vr-link" href="https://my.matterport.com/show/?m=avNBRSgeY3k" target="_blank" rel="noopener noreferrer"><img width="200px" src="assets/images/virtual-tour.png"  alt="Villa Virtual Tour">
+                    <p>CLICK HERE</p>
+                </a>
+                </div>
+            </div>
+
+                <div class="row font-md ft-500">
+                    <div class="col">
+                        <!-- TrustBox widget - Micro Review Count -->
+                        <div class="trustpilot-widget" data-locale="en-US" data-template-id="5613c9cde69ddc09340c6beb" data-businessunit-id="5d610cc3790ba3000132cd5c" data-style-height="100%" data-style-width="100%" data-theme="light">
+                        <a href="https://www.trustpilot.com/review/prestigebookings.com" target="_blank" rel="noopener">Trustpilot</a>
+                        </div>
+                        <!-- End TrustBox widget -->
+                    </div>
+                </div>
+            </div>
+            <!-- /booking -->
+        </div>
+    </div>
+</div>
+<!-- ./section -->
+
+<!-- section full description -->
+<div class="section" id="villa-description">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>About Villa</h3>
+                <p>Showcasing imaginative architecture and a dramatic infinity pool, this dramatic villa is as relaxing as it is beautiful. Enchanting both day and night, villa Avyana is paradise found. With their colorful decor and tasteful furnishings, the five en-suite bedrooms are perfectly suited for relaxing with family and friends.
+                With a total of five bedrooms, villa Avyana can accommodate up to ten adults, or twelve guests total including children. Each bedroom includes luxurious bedding which can be configured as Queens or singles.</p>
+                <h3>Outside area</h3>
+                <p>Enjoy and evening watching the amazing Coral Bay sunset on your rooftop terrace followed by some gazing at stars. The pool deck is no doubt the heart of villa Avyana where guests come together to read, swim, have a drink at your private bar, or simply relax and let the world pass by. Guests at villa Avyana can watch a movie in your private cinema, play table football or table tennis, get a rejuvenating massage from our visiting masseuse after relaxing in your private sauna area. There are 4 restaurants and bars within 5 minutes’ walk of villa Avyana covering all the food and beverages of your choice.</p>
+                <h3>Accessibility</h3>
+                <p>Villa Avyana comes complete with a lift to all floors except the roof terrace and all internal doors and showers are suitable for wheelchairs. The doors leading to the pool terrace and balconies are sliding patio doors suitable for a wheelchair.</p>
+                <h3>Coast/Beach</h3>
+                <p>The beautiful beach resort of Coral Bay is often described as the best bay on the west of the island. And it’s no surprise, when you consider the calm turquoise sea, dipping gently into some of the clearest off shore diving space in the Mediterranean, the scattered palm trees, the 600 meters of soft white sand and, in summertime, the almost cloudless blue skies. Coral Bay centre is approx. 2.5km from the villa.</p>
+                <h3>Location Description</h3>
+                <p>Coral Bay is the well-known award winning blue flag beach resort for the Paphos district. This family oriented area has become a lively resort with plenty to offer in terms of amenities and activities. The centre of the resort which features a wide selection of restaurants offering both Cypriot and International Cuisines, cafes, bars, shops, a choice of supermarkets, several banks, a chemist and a laundry within 2.5km of the villa. The resort boasts two sandy beaches, the busier of the two being the popular Coral Bay Beach, a sandy horseshoe shaped bay honored with a Blue Flag of the European Union. Sunbeds and umbrellas are available for hire, water-sports are on offer and there are two beach cafes providing refreshments.</p>
+                <p>A little further along the coast you reach the natural rock caves of the area known locally as Sea Caves, an area which provides ideal snorkeling territory and is popular with local scuba diving schools. For a taste of the more traditional head to the tiny fishing hamlet of St Georges from where you can enjoy some of the islands most memorable sunset views and dine at one of the small collection of family run tavernas. For nature lovers the start of the protected Akamas Peninsula is just to the north of the village. Or you can head to the hillside village of Peyia, approx. 3-4 kilometers inland from Coral Bay to sample a traditional Cypriot meze meal at one of its small selection of long established tavernas and village coffee shops.</p>
+                <p>Paphos Town approximately 20 kilometers away, was once the capital of the island is now included in the official UNESCO list of cultural and natural treasures of the world’s heritage. The remains of villas, palaces, theaters, fortresses and tombs mean that the town is of exceptional architectural and historic value. The well preserved mosaics and the Tombs of the Kings are probably the biggest cultural draw with further archaeological discoveries continually being made. Pano Pafos on the cliff is the main administrative centre and residential district while Kato Pafos, by the sea, is the main tourist area built around the harbor and medieval port.</p>
+                <p>Mini golf, water-sports and go-karting are all activities available in the immediate Coral Bay area. The Paphos Zoo and the Horse Riding Stables which cater for all ages are both within a 5 minute drive of the villa. Extend your exploring to encompass the town of Paphos and the list of available activities expands to include a bowling alley, water-park, several Heritage sites, attractive harbor area and modern shopping facilities. There are 4 golf courses; Tsada Golf Course, Secret Valley Golf Course, Aphrodite Hills Golf Course and Elea Golf Course all within approximately a 30 minute drive.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./section full description -->  
+
+<!-- section map -->
+<div class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Location</h3>
+                <div class="divider-md"></div>
+            </div>
+        </div>
+    </div>
+    <iframe title="google map" src="https://maps.google.ie/maps?q=34.870099,32.349959&amp;num=1&amp;t=h&amp;hl=en&amp;ie=UTF8&amp;z=14&amp;output=embed" width="100%" height="550" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+</div>
+<!-- ./section map --> 
+{% include villa-slider.html %}
